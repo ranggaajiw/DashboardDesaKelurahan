@@ -18,10 +18,10 @@ desa_gdf = desa_gdf.dropna(subset=["prediksi", "NAMOBJ"])
 
 # Warna & label
 label_dict = {
-    "kelas2": "Sangat Maju",
-    "kelas3": "Maju",
-    "kelas1": "Terbatas",
-    "kelas4": "Sangat Terbatas"
+    "kelas2": "Maju",
+    "kelas3": "Cukup Maju",
+    "kelas1": "Cukup Terbatas",
+    "kelas4": "Terbatas"
 }
 color_dict = {
     "kelas2": "#213448",
@@ -109,10 +109,10 @@ legend_html = '''
     box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 ">
 <b>Legenda Klaster:</b><br>
-<i style="background: #213448; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Sangat Maju<br>
-<i style="background: #547792; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Maju<br>
-<i style="background: #94B4C1; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Terbatas<br>
-<i style="background: #ECEFCA; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Sangat Terbatas
+<i style="background: #213448; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Maju<br>
+<i style="background: #547792; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Cukup Maju<br>
+<i style="background: #94B4C1; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Cukup Terbatas<br>
+<i style="background: #ECEFCA; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Terbatas
 </div>
 '''
 
