@@ -12,7 +12,7 @@ st.title("Dashboard Klasifikasi Desa/Kelurahan - DDAC 2025 - AD/ART Team")
 st.markdown("Visualisasi Peta Tematik Tingkat Pembangunan & Aksesibilitas Terhadap Fasilitas Umum di Level Kelurahan/Desa Provinsi Kalimantan Timur")
 
 # Load shapefile klaster desa
-shapefile_path = "data/DataDashboard.shp"
+shapefile_path = "DataDashboard.shp"
 desa_gdf = gpd.read_file(shapefile_path)
 desa_gdf = desa_gdf.dropna(subset=["prediksi", "NAMOBJ"])
 
@@ -62,14 +62,14 @@ pilihan_fasilitas = st.selectbox("Pilih jenis fasilitas yang ingin ditampilkan:"
 ))
 
 fasilitas_paths = {
-    "TK": "data/Jenjang_TK.shp",
-    "SD": "data/SD_MI.shp",
-    "SMP": "data/SMP_MTS.shp",
-    "SMA": "data/SMA_SMK_MA.shp",
-    "Pasar": "data/Titik Pasar.shp",
-    "Minimarket dan Kios": "data/Titik Minimarket & Kios.shp",
-    "Rumah Sakit": "data/Titik RS.shp",
-    "Puskesmas & Klinik": "data/Titik Puskesmas dan Klinik.shp"
+    "TK": "Jenjang_TK.shp",
+    "SD": "SD_MI.shp",
+    "SMP": "SMP_MTS.shp",
+    "SMA": "SMA_SMK_MA.shp",
+    "Pasar": "Titik Pasar.shp",
+    "Minimarket dan Kios": "Titik Minimarket & Kios.shp",
+    "Rumah Sakit": "Titik RS.shp",
+    "Puskesmas & Klinik": "Titik Puskesmas dan Klinik.shp"
 }
 
 
@@ -150,14 +150,14 @@ folium_static(m, width=1100, height=700)
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Membaca file shapefile untuk setiap kategori
-gdf_tk = gpd.read_file("data/Jenjang_TK.shp")
-gdf_sd = gpd.read_file("data/Jenjang Fix/SD_MI.shp")
-gdf_smp = gpd.read_file("data/SMP_MTS.shp")
-gdf_sma = gpd.read_file("data/SMA_SMK_MA.shp")
-gdf_pasar = gpd.read_file("data/Titik Pasar.shp")
-gdf_minimarket = gpd.read_file("data/Titik Minimarket & Kios.shp")
-gdf_rs = gpd.read_file("data/Titik RS.shp")
-gdf_puskesmas = gpd.read_file("data/Titik Puskesmas dan Klinik.shp")
+gdf_tk = gpd.read_file("Jenjang_TK.shp")
+gdf_sd = gpd.read_file("Jenjang Fix/SD_MI.shp")
+gdf_smp = gpd.read_file("SMP_MTS.shp")
+gdf_sma = gpd.read_file("SMA_SMK_MA.shp")
+gdf_pasar = gpd.read_file("Titik Pasar.shp")
+gdf_minimarket = gpd.read_file("Titik Minimarket & Kios.shp")
+gdf_rs = gpd.read_file("Titik RS.shp")
+gdf_puskesmas = gpd.read_file("Titik Puskesmas dan Klinik.shp")
 
 # Ambil jumlah masing-masing
 tk = len(gdf_tk)
