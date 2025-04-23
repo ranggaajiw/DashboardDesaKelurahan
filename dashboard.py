@@ -115,10 +115,8 @@ legend_html = '''
 <i style="background: #ECEFCA; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Terbatas
 </div>
 '''
-
 import streamlit.components.v1 as components
 components.html(legend_html, height=180)
-
 
 # CSS & peta ditampilkan di tengah
 st.markdown(
@@ -164,7 +162,7 @@ puskes = len(gdf_puskesmas)
 
 import streamlit as st
 
-st.markdown("## Jumlah Fasilitas")
+st.markdown("## Jumlah Fasilitas Terdata")
 
 col1, col2, col3, col4 = st.columns(4)
 
