@@ -50,7 +50,7 @@ folium.GeoJson(
         'fillOpacity': 0.7,
     },
     tooltip=GeoJsonTooltip(
-        fields=["NAMOBJ", "WADMKK" "label"],
+        fields=["NAMOBJ", "WADMKK", "label"],
         aliases=["Desa/Kelurahan:","Kab/Kota:", "Kategori Klaster:"],
         localize=True
     )
