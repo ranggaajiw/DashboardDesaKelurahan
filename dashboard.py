@@ -99,33 +99,26 @@ if pilihan_fasilitas in fasilitas_paths:
             popup=popup_text
         ).add_to(m)
 
-# Tambahkan legenda klaster
 legend_html = '''
-{% macro html() %}
 <div style="
-    position: fixed;
-    bottom: 50px;
-    left: 50px;
-    width: 200px;
-    height: 170px;
-    z-index:9999;
     font-size:14px;
     background-color: white;
     border:2px solid grey;
     padding: 10px;
+    width: fit-content;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 ">
-    <b>Legenda Klaster:</b><br>
-    <i style="background: #213448; width: 15px; height: 15px; float: left; margin-right: 8px; display:inline-block;"></i> Sangat Maju<br>
-    <i style="background: #547792; width: 15px; height: 15px; float: left; margin-right: 8px; display:inline-block;"></i> Maju<br>
-    <i style="background: #94B4C1; width: 15px; height: 15px; float: left; margin-right: 8px; display:inline-block;"></i> Terbatas<br>
-    <i style="background: #ECEFCA; width: 15px; height: 15px; float: left; margin-right: 8px; display:inline-block;"></i> Sangat Terbatas
+<b>Legenda Klaster:</b><br>
+<i style="background: #213448; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Sangat Maju<br>
+<i style="background: #547792; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Maju<br>
+<i style="background: #94B4C1; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Terbatas<br>
+<i style="background: #ECEFCA; width: 15px; height: 15px; display:inline-block; margin-right: 8px;"></i> Sangat Terbatas
 </div>
-{% endmacro %}
 '''
-legend = MacroElement()
-legend._template = Template(legend_html)
-m.get_root().add_child(legend)
+
+import streamlit.components.v1 as components
+components.html(legend_html, height=180)
+
 
 # CSS & peta ditampilkan di tengah
 st.markdown(
