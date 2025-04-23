@@ -151,7 +151,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 
 # Membaca file shapefile untuk setiap kategori
 gdf_tk = gpd.read_file("Jenjang_TK.shp")
-gdf_sd = gpd.read_file("Jenjang Fix/SD_MI.shp")
+gdf_sd = gpd.read_file("SD_MI.shp")
 gdf_smp = gpd.read_file("SMP_MTS.shp")
 gdf_sma = gpd.read_file("SMA_SMK_MA.shp")
 gdf_pasar = gpd.read_file("Titik Pasar.shp")
